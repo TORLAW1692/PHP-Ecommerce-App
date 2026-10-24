@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 17, 2026 at 04:41 PM
+-- Generation Time: Oct 24, 2026 at 01:36 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.2.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `php_ecomerce_app`
+-- Database: `php_ecommerce_app`
 --
 
 -- --------------------------------------------------------
@@ -32,6 +32,14 @@ CREATE TABLE `cart` (
   `product_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`cart_id`, `product_id`, `quantity`) VALUES
+(1, 1, 1),
+(3, 3, 3);
 
 -- --------------------------------------------------------
 
@@ -55,7 +63,10 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`category`, `product_id`, `product_name`, `description`, `price`, `image_url`) VALUES
 ('Game', 1, 'The Elder Scrolls IV: Oblivion Remastered', 'Fantasy action RPG with open-world exploration and quests.', 49.99, 'images/oblivion-remastered.jpg'),
 ('Console', 2, 'PlayStation 5', 'Current-generation gaming console with high-speed SSD and 4K support.', 499.99, 'images/playstation-5.jpg'),
-('Controller', 3, 'Xbox Wireless Controller', 'Wireless controller for Xbox consoles and Windows PCs.', 64.99, 'images/xbox-controller.jpg');
+('Controller', 3, 'Xbox Wireless Controller', 'Wireless controller for Xbox consoles and Windows PCs.', 64.99, 'images/xbox-controller.jpg'),
+('Controller', 4, 'PlayStation 5 DualSense Controller\r\n\r\n', 'Wireless controller for PlayStation 5 with adaptive triggers and haptic feedback.', 74.99, ''),
+('Console', 5, '\r\nXbox Series X\r\n\r\n', 'High-performance Xbox console with fast SSD storage and 4K gaming support.', 499.99, ''),
+('Game', 6, 'Diablo IV\r\n\r\n', 'Action RPG featuring dungeon exploration, character builds, and online world events.', 69.99, '');
 
 --
 -- Indexes for dumped tables
@@ -81,13 +92,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
