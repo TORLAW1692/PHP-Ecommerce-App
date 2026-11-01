@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 24, 2026 at 01:36 PM
+-- Generation Time: Nov 01, 2026 at 06:10 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.35
 
@@ -38,8 +38,7 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`cart_id`, `product_id`, `quantity`) VALUES
-(1, 1, 1),
-(3, 3, 3);
+(5, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -64,9 +63,9 @@ INSERT INTO `products` (`category`, `product_id`, `product_name`, `description`,
 ('Game', 1, 'The Elder Scrolls IV: Oblivion Remastered', 'Fantasy action RPG with open-world exploration and quests.', 49.99, 'images/oblivion-remastered.jpg'),
 ('Console', 2, 'PlayStation 5', 'Current-generation gaming console with high-speed SSD and 4K support.', 499.99, 'images/playstation-5.jpg'),
 ('Controller', 3, 'Xbox Wireless Controller', 'Wireless controller for Xbox consoles and Windows PCs.', 64.99, 'images/xbox-controller.jpg'),
-('Controller', 4, 'PlayStation 5 DualSense Controller\r\n\r\n', 'Wireless controller for PlayStation 5 with adaptive triggers and haptic feedback.', 74.99, ''),
-('Console', 5, '\r\nXbox Series X\r\n\r\n', 'High-performance Xbox console with fast SSD storage and 4K gaming support.', 499.99, ''),
-('Game', 6, 'Diablo IV\r\n\r\n', 'Action RPG featuring dungeon exploration, character builds, and online world events.', 69.99, '');
+('Controller', 4, 'PlayStation 5 DualSense Controller\r\n\r\n', 'Wireless controller for PlayStation 5 with adaptive triggers and haptic feedback.', 74.99, 'images/dualsense-controller.jpg'),
+('Console', 5, '\r\nXbox Series X\r\n\r\n', 'High-performance Xbox console with fast SSD storage and 4K gaming support.', 499.99, 'images/xbox-series-x.jpg'),
+('Game', 6, 'Diablo IV\r\n\r\n', 'Action RPG featuring dungeon exploration, character builds, and online world events.', 69.99, 'images/diablo-4.jpg');
 
 --
 -- Indexes for dumped tables
@@ -92,7 +91,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `products`
