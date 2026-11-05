@@ -16,6 +16,7 @@ $products = get_products();
 <html>
 <head>
     <title>PHP Ecommerce App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -32,11 +33,14 @@ $products = get_products();
 
     <?php foreach ($products as $product): ?>
 
-        <div>
-            <h3><?php echo $product["product_name"]; ?></h3>
+        <div class="product-card">
+
+            <h3>
+                <?php echo $product["product_name"]; ?>
+            </h3>
 
             <p>
-                Category:
+                <strong>Category:</strong>
                 <?php echo $product["category"]; ?>
             </p>
 
@@ -45,7 +49,7 @@ $products = get_products();
             </p>
 
             <p>
-                Price:
+                <strong>Price:</strong>
                 $<?php echo number_format($product["price"], 2); ?>
             </p>
 
@@ -56,6 +60,7 @@ $products = get_products();
             >
 
             <form method="POST">
+
                 <input
                     type="hidden"
                     name="product_id"
@@ -67,9 +72,9 @@ $products = get_products();
                     name="add_to_cart"
                     value="Add to Cart"
                 >
+
             </form>
 
-            <hr>
         </div>
 
     <?php endforeach; ?>

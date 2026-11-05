@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121018;
+    color: #f5f2ff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body > h1,
+body > h2,
+body > nav,
+body > table,
+body > p,
+body > div {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+h1 {
+    color: #ffd84d;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #c99cff;
+}
+
+h3 {
+    color: #ffd84d;
+    margin-top: 0;
+}
+
+nav {
+    background-color: #241634;
+    padding: 14px 18px;
+    border-left: 5px solid #ffd84d;
+    margin-bottom: 25px;
+}
+
+nav a {
+    color: #ffd84d;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #5b3a7a;
+    margin: 25px 40px;
+}
+
+body > div {
+    background-color: #1d1725;
+    border: 1px solid #503266;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    max-width: 760px;
+}
+
+img {
+    display: block;
+    max-width: 200px;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 2px solid #5b3a7a;
+    background-color: white;
+}
+
+input[type="submit"] {
+    background-color: #ffd84d;
+    color: #201329;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #b980ff;
+    color: white;
+}
+
+input[type="number"] {
+    background-color: #f8f5ff;
+    color: #111111;
+    border: 2px solid #7a4fa3;
+    border-radius: 5px;
+    padding: 6px;
+    width: 60px;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #1d1725;
+    min-width: 700px;
+    margin-top: 25px;
+}
+
+th {
+    background-color: #5b2d82;
+    color: #ffd84d;
+    padding: 14px;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #5b3a7a;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #281d32;
+}
+
+tr:hover {
+    background-color: #352445;
+}
+
+p {
+    line-height: 1.5;
+}

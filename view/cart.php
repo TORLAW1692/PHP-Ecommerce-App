@@ -30,7 +30,9 @@ $cart = get_cart();
 <html>
 <head>
     <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <h1>Shopping Cart</h1>
@@ -42,9 +44,11 @@ $cart = get_cart();
 
     <hr>
 
+    <h2>Your Cart</h2>
+
     <?php if (count($cart) > 0): ?>
 
-        <table border="1" cellpadding="10">
+        <table>
             <tr>
                 <th>Product</th>
                 <th>Price</th>
@@ -55,7 +59,9 @@ $cart = get_cart();
             </tr>
 
             <?php foreach ($cart as $item): ?>
+
                 <tr>
+
                     <td>
                         <?php echo $item["product_name"]; ?>
                     </td>
@@ -73,7 +79,9 @@ $cart = get_cart();
                     </td>
 
                     <td>
+
                         <form method="POST">
+
                             <input
                                 type="number"
                                 name="quantity"
@@ -92,11 +100,15 @@ $cart = get_cart();
                                 name="update_quantity"
                                 value="Update"
                             >
+
                         </form>
+
                     </td>
 
                     <td>
+
                         <form method="POST">
+
                             <input
                                 type="hidden"
                                 name="cart_id"
@@ -108,9 +120,13 @@ $cart = get_cart();
                                 name="delete_item"
                                 value="Remove"
                             >
+
                         </form>
+
                     </td>
+
                 </tr>
+
             <?php endforeach; ?>
 
         </table>
