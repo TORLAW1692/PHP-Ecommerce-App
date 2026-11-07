@@ -24,6 +24,13 @@ if (isset($_POST['delete_item'])) {
 // Retrieve the current cart after any changes are processed.
 $cart = get_cart();
 
+// Calculate the total cost of all items in the cart.
+$cart_total = 0;
+
+foreach ($cart as $item) {
+    $cart_total += $item["total"];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -130,6 +137,11 @@ $cart = get_cart();
             <?php endforeach; ?>
 
         </table>
+
+        <h2>
+            Cart Total:
+            $<?php echo number_format($cart_total, 2); ?>
+        </h2>
 
     <?php else: ?>
 
