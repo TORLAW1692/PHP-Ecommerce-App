@@ -1,0 +1,4 @@
+# Database model files are for PHP includes, not direct browser access.
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
