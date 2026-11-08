@@ -45,3 +45,20 @@ The application was developed incrementally throughout the course. Each week add
 
 ## Repository
 https://github.com/TORLAW1692/PHP-Ecommerce-App
+
+
+## Application Screenshots
+
+These screenshots show the PHP E-commerce App running locally with Apache and MySQL/MariaDB through XAMPP. They document the product catalog and database-backed shopping cart. The `localhost` address shown in the browser is a local development environment, not a publicly hosted demo.
+
+### Product Catalog — First Products
+
+![Video game storefront showing Oblivion Remastered and PlayStation 5 product cards](screenshots/product-catalog-top.png)
+
+### Product Catalog — Additional Products
+
+![Continued product catalog showing Xbox and PlayStation controllers and Xbox Series X](screenshots/product-catalog-continued.png)
+
+### Shopping Cart
+
+![Shopping cart displaying products, quantities, line totals, update and remove controls, and the cart total](screenshots/shopping-cart.png)
