@@ -62,3 +62,15 @@ These screenshots show the PHP E-commerce App running locally with Apache and My
 ### Shopping Cart
 
 ![Shopping cart displaying products, quantities, line totals, update and remove controls, and the cart total](screenshots/shopping-cart.png)
+
+## Local Setup (XAMPP)
+
+1. Place or clone this project in your XAMPP `htdocs` directory, then start Apache and MySQL/MariaDB.
+2. Import `php_ecommerce_app.sql` into your local MySQL/MariaDB server using phpMyAdmin.
+3. Create or use a **local database account** with only the permissions required by this application.
+4. Copy `model/database.example.php` to `model/database.local.php`. Edit the copy with your own local database host, username, password, and database name.
+5. Open `http://localhost/PHP-Ecommerce-App/view/products.php` (adjust the folder name if yours differs).
+
+**Security:** `model/database.local.php` is excluded from Git via `.gitignore`. Never commit real passwords, database exports containing private customer data, or production credentials. The `model` directory is also blocked from direct HTTP access by an Apache `.htaccess` file; ensure Apache honors `.htaccess` rules.
+
+**Important for existing clones:** Earlier commits contained database credentials in `model/database.php`. Changing the current file does not erase Git history. Rotate the previously exposed database password (and any reused password) before continuing, then put the replacement only in your local ignored config file. Do not paste credentials into GitHub issues or pull requests.
